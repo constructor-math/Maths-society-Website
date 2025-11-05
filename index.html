@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Math Society</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
 <header>
     <nav class="container">
         <a href="#" class="logo">
-            <img src="PHOTO-2025-11-02-23-22-34.jpg" alt="Math Society Logo">
+            <img src="logo_final.png" alt="Math Society Logo">
             <span>Math Society</span>
         </a>
         <!-- kept only the side menu button, removed the <li> links -->
@@ -70,7 +72,24 @@
     <section id="contact" class="container content-section">
         <h2>Get In Touch</h2>
         <p>Have questions? Want to join? Reach out to us!</p>
-        <p>Email: <a href="mailto:constructor.maths@gmail.com">contact@mathsociety.example.com</a></p>
+
+        <ul class="social-links">
+        <!-- SharePoint link (replace with your SharePoint link) -->
+        <li><a  href="https://yoursharepointlink.com" target="_blank" title="SharePoint" class="microsoft"><img class="img-icon" src="sharepoint-logotype.png"/></a></li>
+
+        <!-- YouTube link (replace with your YouTube channel link) -->
+        <li><a href="https://www.youtube.com/@MathClubCUB" target="_blank" title="YouTube" class="youtube"><i class="fab fa-youtube"></i></a></li>
+
+        <!-- LinkedIn link (replace with your LinkedIn profile) -->
+        <li><a href="https://www.linkedin.com/in/constructor-university-maths-society-768a13388/" target="_blank" title="LinkedIn" class="linkedin"><i class="fab fa-linkedin"></i></a></li>
+
+        <!-- Instagram link (replace with your Instagram profile) -->
+        <li><a href="https://www.instagram.com/mathclub.cube/#" target="_blank" title="Instagram" class="instagram"><i class="fab fa-instagram"></i></a></li>
+
+        <!-- Gmail link (opens Gmail to send email) -->
+        <li><a href="mailto:NEEDS_FIXING@gmail.com" target="_blank" title="Email" class="gmail"><i class="fas fa-envelope"></i></a></li>
+    </ul>
+      
     </section>
     <section>
 
@@ -89,6 +108,19 @@
 
 
 <style>
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 12px;
+}
+.icons{
+    display:flex;
+    margin: 5px 2px;
+}
 
 :root {
     --primary-color: #7D1201;
@@ -98,6 +130,86 @@
     --text-color: #555;
     --font-family: 'Arial', sans-serif;
 }
+.img-icon{
+   
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+}
+/* Simple styling */
+        .social-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            padding: 0;
+        }
+        .social-links li {
+            font-size: 40px; /* Increase the size of the icons */
+            position: relative;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%; /* Make icons circular */
+        }
+        .social-links a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            position: relative;
+            border-radius: 50%; /* Ensure the gradient follows the circular shape */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        /* Instagram gradient */
+        .social-links .instagram {
+            background: linear-gradient(45deg, #FDCB82, #D500F9); /* Instagram gradient */
+        }
+        /* Hover effect for Instagram */
+        .social-links .instagram:hover {
+            background: linear-gradient(45deg, #D500F9, #FDCB82);
+        }
+
+        /* YouTube gradient (Red to Dark Red) */
+        .social-links .youtube {
+            background: linear-gradient(45deg, #FF0000, #C1351D); /* YouTube gradient */
+        }
+        .social-links .youtube:hover {
+            background: linear-gradient(45deg, #C1351D, #FF0000);
+        }
+
+        /* LinkedIn gradient (Blue shades) */
+        .social-links .linkedin {
+            background: linear-gradient(45deg, #0077b5, #006097); /* LinkedIn gradient */
+        }
+        .social-links .linkedin:hover {
+            background: linear-gradient(45deg, #006097, #0077b5);
+        }
+
+        /* Microsoft (SharePoint) gradient (Microsoft colors) */
+        .social-links .microsoft {
+            background: linear-gradient(45deg, #00A4EF, #F4B400); /* Microsoft gradient */
+        }
+        .social-links .microsoft:hover {
+            background: linear-gradient(45deg, #F4B400, #00A4EF);
+        }
+
+        /* Gmail (Red to Yellow) */
+        .social-links .gmail {
+            background: linear-gradient(45deg, #D93025, #F4B400); /* Gmail gradient */
+        }
+        .social-links .gmail:hover {
+            background: linear-gradient(45deg, #F4B400, #D93025);
+        }
+
+        .social-links a:hover {
+            transform: scale(1.1);
+        }
 
 html {
     scroll-behavior: smooth;
@@ -115,6 +227,10 @@ body {
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
 }
 
 h1, h2 {
@@ -203,6 +319,11 @@ header nav {
 .side-modal.open {
     pointer-events: auto;
     opacity: 1;
+}
+.fa-instagram {
+  background: transparent !important;
+  color: white;
+  box-shadow: none !important;
 }
 
 /* semi-transparent overlay */
